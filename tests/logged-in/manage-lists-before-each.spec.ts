@@ -3,7 +3,7 @@ import { addMovie, createList, openLists } from '../helpers/list-utilities';
 
 // Before each test, navigate to the base URL, create a list, and open the lists page
 test.beforeEach(async ({ page }) => {
-  await page.goto('');
+  await page.goto('http://localhost:3000/');
   await createList(
     page,
     'my favorite movies',

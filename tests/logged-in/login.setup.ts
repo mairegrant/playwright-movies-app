@@ -2,7 +2,7 @@ import { test as setup, expect } from '@playwright/test';
 import { STORAGE_STATE } from '../../playwright.config';
 
 setup('log user in and verify profile access', async ({ page }) => {
-  await page.goto('');
+  await page.goto('http://localhost:3000/');
   await page.getByRole('banner').getByLabel('Log In').click();
 
   // Fill in the username and password fields and submit the form

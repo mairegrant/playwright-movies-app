@@ -27,7 +27,7 @@ const discover = ['Top Rated', 'Upcoming', 'Popular'];
 
 test.beforeEach(async ({ page }) => {
   // Navigate to the base URL before each test
-  await page.goto('');
+  await page.goto('http://localhost:3000/');
 });
 
 test.describe('navigates to menu items', async () => {

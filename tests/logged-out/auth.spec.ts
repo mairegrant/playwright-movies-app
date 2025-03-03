@@ -1,7 +1,7 @@
 import { test, expect } from '@playwright/test';
 
 test('user can log out', async ({ page }) => {
-  await page.goto('');
+  await page.goto('http://localhost:3000/');
   await page.getByLabel('Log In').click();
 
   // Fill in the username and password fields and submit the form

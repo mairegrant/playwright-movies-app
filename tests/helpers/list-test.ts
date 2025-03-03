@@ -19,7 +19,7 @@ export const listTest = baseTest.extend<{ listPage: Page }>({
   listPage: async ({ context }, use) => {
     // fixture setup
     const page = await context.newPage();
-    await page.goto('');
+    await page.goto('http://localhost:3000/');
     await createList(page, 'my favorite movies', 'list of my favorite movies');
 
     await listTest.step('add movies to list', async () => {

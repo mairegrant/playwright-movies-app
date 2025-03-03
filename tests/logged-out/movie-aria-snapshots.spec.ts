@@ -1,7 +1,7 @@
 import { test, expect } from '@playwright/test';
 
 test('movie page snapshot', async ({ page }) => {
-  await page.goto('movie?id=1079091&page=1');
+  await page.goto('http://localhost:3000/movie?id=1079091&page=1');
   await expect(page.getByRole('main')).toMatchAriaSnapshot(`
     - main:
       - heading "It Ends With Us" [level=1]

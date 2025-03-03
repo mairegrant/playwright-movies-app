@@ -20,7 +20,7 @@ test.describe('Movie Details Page - Content', () => {
         },
       );
 
-      await page.goto('movie?id=718821&page=1');
+      await page.goto('http://localhost:3000/movie?id=718821&page=1');
       const movie = page.getByRole('main');
 
       await expect(movie.getByLabel('Rating Value')).toHaveText('7.02');
@@ -44,7 +44,7 @@ test.describe('Movie Details Page - Content', () => {
 
 test.describe('Movie Details Page - Links', () => {
   test.beforeEach(async ({ page }) => {
-    await page.goto('movie?id=718821&page=1');
+    await page.goto('http://localhost:3000/movie?id=718821&page=1');
   });
 
   test('action genre link', async ({ page }) => {
