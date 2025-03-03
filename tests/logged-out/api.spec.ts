@@ -5,7 +5,7 @@ test.use({ baseURL: TMDB_API_BASE_URL });
 
 test.describe('movie categories', () => {
   test('first popular movie', async ({ request }) => {
-    const response = await request.get(`http://localhost:3000/3/movie/popular`, {
+    const response = await request.get(`/3/movie/popular`, {
       params: { page: 1 },
     });
     await expect(response).toBeOK();
@@ -20,7 +20,7 @@ test.describe('movie categories', () => {
   });
 
   test('first top rated movie', async ({ request }) => {
-    const response = await request.get(`http://localhost:3000/3/movie/top_rated`, {
+    const response = await request.get(`/3/movie/top_rated`, {
       params: { page: 1 },
     });
     await expect(response).toBeOK();
@@ -35,7 +35,7 @@ test.describe('movie categories', () => {
   });
 
   test('order of upcoming movie', async ({ request }) => {
-    const response = await request.get(`http://localhost:3000/3/movie/upcoming`, {
+    const response = await request.get(`/3/movie/upcoming`, {
       params: { page: 1 },
     });
     await expect(response).toBeOK();
@@ -51,7 +51,7 @@ test.describe('movie categories', () => {
 });
 
 test('action genre movies', async ({ request }) => {
-  const response = await request.get(`http://localhost:3000/3/discover/movie`, {
+  const response = await request.get(`/3/discover/movie`, {
     params: { with_genres: 28, page: 1 },
   }); // genre id for action is 28
   await expect(response).toBeOK();
@@ -64,7 +64,7 @@ test('action genre movies', async ({ request }) => {
 });
 
 test('movie search', async ({ request }) => {
-  const response = await request.get(`http://localhost:3000/3/search/movie`, {
+  const response = await request.get(`/3/search/movie`, {
     params: { query: 'Twisters' },
   });
   await expect(response).toBeOK();

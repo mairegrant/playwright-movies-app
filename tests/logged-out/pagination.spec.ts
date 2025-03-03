@@ -1,7 +1,7 @@
 import { test, expect } from '@playwright/test';
 
 test('pagination', async ({ page }) => {
-  await page.goto('');
+  await page.goto('http://localhost:3000/');
 
   const movies = page.getByRole('listitem', { name: 'movie' });
 

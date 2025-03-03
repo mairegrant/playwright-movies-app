@@ -3,7 +3,7 @@ import path from 'path';
 
 test('sort movies by average votes and original title', async ({ page }) => {
   // Navigate to the movies page with Action genre
-  await page.goto('/genre?id=28&name=Action&page=1');
+  await page.goto('http://localhost:3000/genre?id=28&name=Action&page=1');
 
   // Get all the movies on the page
   const movies = page.getByRole('listitem', { name: 'movie' });

@@ -1,7 +1,7 @@
 import { test, expect, Page } from '@playwright/test';
 
 test('search for "Twisters" movie', async ({ page }) => {
-  await page.goto('');
+  await page.goto('http://localhost:3000/');
 
   await searchForMovie(page, 'twisters');
 
@@ -22,7 +22,7 @@ test('search for "Twisters" movie', async ({ page }) => {
 });
 
 test('search for non-existent-movie', async ({ page }) => {
-  await page.goto('');
+  await page.goto('http://localhost:3000/');
 
   await searchForMovie(page, 'non-existent-movie');
 

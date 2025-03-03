@@ -44,7 +44,7 @@ test('Avengers: Infinity is the first top rated movie', async ({
 });
 
 test('dynamic content for first upcoming movie', async ({ page }, testInfo) => {
-  await page.goto('/?category=Upcoming&page=1');
+  await page.goto('http://localhost:3000/?category=Upcoming&page=1');
 
   const firstMovie = page.getByRole('listitem', { name: 'movie' }).first();
   const firstMovieRating = page.getByLabel('rating').first();
